@@ -1,0 +1,81 @@
+{
+  "startNode": "root",
+  "nodes": {
+    "root": {
+      "question": "What do you want to do with ChatGPT?",
+      "basePrompt": "You are a helpful assistant",
+      "options": [
+        {
+          "text": "Ask a prompt oriented question",
+          "nextNodeId": "ask"
+        },
+        {
+          "text": "Analyze a single file (PDF)",
+          "nextNodeId": "analyze_file"
+        },
+        {
+          "text": "Analyze a project (zip)",
+          "nextNodeId": "analyze_project"
+        },
+        {
+          "text": "Build an app",
+          "nextNodeId": "app_build"
+        }
+      ]
+    },
+    "ask": {
+      "basePrompt": "We will do Q&A",
+      "question": "Please type your question.",
+      "options": [
+        {
+          "text": "Stop/Finalize",
+          "finalPrompt": "You are a helpful assistant and We will do Q&A"
+        }
+      ]
+    },
+    "analyze_file": {
+      "basePrompt": "We will analyze one file",
+      "question": "We will analyze one file (e.g. PDF).",
+      "options": [
+        {
+          "text": "Stop/Finalize",
+          "finalPrompt": "You are a helpful assistant and We will analyze one file"
+        }
+      ]
+    },
+    "analyze_project": {
+      "basePrompt": "We will analyze multiple files",
+      "question": "We will analyze a project (zip) of code/text files.",
+      "options": [
+        {
+          "text": "Stop/Finalize",
+          "finalPrompt": "You are a helpful assistant and We will analyze multiple files"
+        },
+        {
+          "text": "summary based on the following cratireia: Overview, Technology Stack, Project Structure...",
+          "nextNodeId": "node_1738589608485"
+        }
+      ]
+    },
+    "app_build": {
+      "basePrompt": "We will build an app based on the following config file",
+      "question": "We will analyze a file and will build an app based on the file",
+      "options": [
+        {
+          "text": "Stop/Finalize",
+          "finalPrompt": "We will build an app based on the following config file"
+        }
+      ]
+    },
+    "node_1738589608485": {
+      "basePrompt": "We will analyze multiple files and base on the code so far fill out the following file, add important points as needed: # Project Context Summary  ## 1. Overview - **Project Name:** *[Project Name]* - **Description:** *A brief summary of what the project does, its purpose, and target audience.* - **Goals:** *List the primary objectives or what the project aims to achieve.*  ## 2. Technology Stack - **Frontend:** *e.g., React, Vue, Angular* - **Backend:** *e.g., Node.js, Django, Flask* - **Database:** *e.g., PostgreSQL, MongoDB* - **Other Tools/Frameworks:** *Any additional libraries or tools used*  ## 3. Project Structure - **Directory Layout:**   /project-root ├── src/ │ ├── components/ │ ├── utils/ │ └── main.js ├── public/ └── README.md  markdown Copy - **Key Files/Modules:**   - *Describe the purpose of major files or modules here.*  ## 4. Key Features & Modules - **Feature 1:** *Brief description.* - **Feature 2:** *Brief description.* - *(List additional features/modules as needed)*  ## 5. Dependencies & Integrations - **External APIs:** *Any third-party services or APIs used.* - **Libraries/Packages:** *List of critical packages if relevant.*  ## 6. Current Status & Roadmap - **Current Status:** *e.g., Development, Testing, Production* - **Upcoming Milestones:** *Short list of next steps or planned features.*  ## 7. Additional Notes - *Include any extra context, assumptions, or instructions that might help in understanding or w",
+      "question": "Node created from: summary based on the following cratireia: Overview, Technology Stack, Project Structure...",
+      "options": [
+        {
+          "text": "Stop/Finalize",
+          "finalPrompt": "We will analyze multiple files and base on the code so far fill out the following file, add important points as needed: # Project Context Summary  ## 1. Overview - **Project Name:** *[Project Name]* - **Description:** *A brief summary of what the project does, its purpose, and target audience.* - **Goals:** *List the primary objectives or what the project aims to achieve.*  ## 2. Technology Stack - **Frontend:** *e.g., React, Vue, Angular* - **Backend:** *e.g., Node.js, Django, Flask* - **Database:** *e.g., PostgreSQL, MongoDB* - **Other Tools/Frameworks:** *Any additional libraries or tools used*  ## 3. Project Structure - **Directory Layout:**   /project-root ├── src/ │ ├── components/ │ ├── utils/ │ └── main.js ├── public/ └── README.md  markdown Copy - **Key Files/Modules:**   - *Describe the purpose of major files or modules here.*  ## 4. Key Features & Modules - **Feature 1:** *Brief description.* - **Feature 2:** *Brief description.* - *(List additional features/modules as needed)*  ## 5. Dependencies & Integrations - **External APIs:** *Any third-party services or APIs used.* - **Libraries/Packages:** *List of critical packages if relevant.*  ## 6. Current Status & Roadmap - **Current Status:** *e.g., Development, Testing, Production* - **Upcoming Milestones:** *Short list of next steps or planned features.*  ## 7. Additional Notes - *Include any extra context, assumptions, or instructions that might help in understanding or w"
+        }
+      ]
+    }
+  }
+}

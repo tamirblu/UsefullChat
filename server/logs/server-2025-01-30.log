@@ -1,0 +1,18 @@
+[2025-01-30T23:02:43.433Z] [INFO] Server started on port 4000
+[2025-01-30T23:03:09.324Z] [INFO] Received /api/chat prompt(length=47) | IP: ::1 | URL: /api/chat
+[2025-01-30T23:03:10.764Z] [INFO] OpenAI answer length=121 | IP: ::1 | URL: /api/chat
+[2025-01-30T23:05:26.957Z] [INFO] Server started on port 4000
+[2025-01-30T23:05:33.351Z] [INFO] Received /api/chat prompt(length=48) | IP: ::1 | URL: /api/chat
+[2025-01-30T23:05:33.352Z] [ERROR] Failed /api/chat: logEvent is not defined | IP: ::1 | URL: /api/chat
+[2025-01-30T23:05:44.339Z] [INFO] Received /api/chat prompt(length=48) | IP: ::1 | URL: /api/chat
+[2025-01-30T23:05:44.339Z] [ERROR] Failed /api/chat: logEvent is not defined | IP: ::1 | URL: /api/chat
+[2025-01-30T23:07:17.929Z] [INFO] Server started on port 4000
+[2025-01-30T23:07:26.749Z] [INFO] Received /api/chat prompt(length=48) | IP: ::1 | URL: /api/chat
+[2025-01-30T23:07:26.750Z] [INFO]  prompt(length=You are a helpful assistant and We will do Q&A
+a)
+[2025-01-30T23:07:27.424Z] [INFO] OpenAI answer length=51 | IP: ::1 | URL: /api/chat
+[2025-01-30T23:08:27.021Z] [INFO] Server started on port 4000
+[2025-01-30T23:08:37.104Z] [INFO] Received /api/chat prompt(length=48) | IP: ::1 | URL: /api/chat
+[2025-01-30T23:08:37.105Z] [INFO]  prompt=(You are a helpful assistant and We will do Q&A
+a)
+[2025-01-30T23:08:38.135Z] [INFO] OpenAI answer length=46 | IP: ::1 | URL: /api/chat

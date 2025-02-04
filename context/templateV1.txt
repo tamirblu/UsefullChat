@@ -1,0 +1,38 @@
+base on the code so far fill out the following file, add important points as needed:
+# Project Context Summary
+
+## 1. Overview
+- **Project Name:** *[Project Name]*
+- **Description:** *A brief summary of what the project does, its purpose, and target audience.*
+- **Goals:** *List the primary objectives or what the project aims to achieve.*
+
+## 2. Technology Stack
+- **Frontend:** *e.g., React, Vue, Angular*
+- **Backend:** *e.g., Node.js, Django, Flask*
+- **Database:** *e.g., PostgreSQL, MongoDB*
+- **Other Tools/Frameworks:** *Any additional libraries or tools used*
+
+## 3. Project Structure
+- **Directory Layout:**  
+/project-root ├── src/ │ ├── components/ │ ├── utils/ │ └── main.js ├── public/ └── README.md
+
+markdown
+Copy
+- **Key Files/Modules:**  
+- *Describe the purpose of major files or modules here.*
+
+## 4. Key Features & Modules
+- **Feature 1:** *Brief description.*
+- **Feature 2:** *Brief description.*
+- *(List additional features/modules as needed)*
+
+## 5. Dependencies & Integrations
+- **External APIs:** *Any third-party services or APIs used.*
+- **Libraries/Packages:** *List of critical packages if relevant.*
+
+## 6. Current Status & Roadmap
+- **Current Status:** *e.g., Development, Testing, Production*
+- **Upcoming Milestones:** *Short list of next steps or planned features.*
+
+## 7. Additional Notes
+- *Include any extra context, assumptions, or instructions that might help in understanding or w

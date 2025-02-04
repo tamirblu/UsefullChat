@@ -1,0 +1,56 @@
+/* style.css (placed in src/ or a dedicated styles/ folder) */
+
+/* Basic container styling */
+.app-container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  /* A generic section box with white background */
+  .section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Primary button */
+  .btn {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #4385f4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #3365d4; 
+  }
+  
+  /* Secondary / Gray button */
+  .btn-secondary {
+    background: #777;
+  }
+  
+  .btn-secondary:hover {
+    background: #666;
+  }
+  
+  /* Inputs (text, textarea) */
+  .input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    box-sizing: border-box;
+  }
+  
