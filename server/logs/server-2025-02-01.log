@@ -1,6 +1,0 @@
-[2025-02-01T14:24:52.238Z] [INFO] Server started on port 4000
-[2025-02-01T14:25:13.803Z] [INFO] Received /api/chat prompt(length=47) | IP: ::1 | URL: /api/chat
-[2025-02-01T14:25:13.805Z] [INFO]  prompt=(You are a helpful assistant and We will do Q&A
-)
-[2025-02-01T14:25:16.561Z] [INFO] OpenAI answer length=99 | IP: ::1 | URL: /api/chat
-[2025-02-01T15:15:27.331Z] [INFO] Server started on port 4000
