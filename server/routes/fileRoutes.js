@@ -20,6 +20,51 @@ function chunkText(text, size = 1000) {
   }
   return chunks;
 }
+router.post('/upload-template-file', upload.single('fileTemplate'), async (req, res) => {
+  try {
+    logEvent('INFO', 'Started /api/upload-file', req);
+
+    const filePath = req.file.path;
+    const userPrompt = req.body.userPrompt;
+    if (req.file.originalname.endsWith(".txt")) {
+
+      const dataBuffer = fs.readFileSync(filePath);
+      const fullText = dataBuffer.toString('utf-8');
+      const fullPrompt = userPrompt + fullText;
+      fs.unlinkSync(filePath);
+      logEvent('INFO', `Completed text file analysis length=${fullPrompt.length}`, req);
+      logEvent('INFO', `Completed text file analysis fullPrompt =${fullPrompt}`, req);
+
+      return res.json({
+        success: true,
+        prompt: fullPrompt
+      });
+    }
+    // If it's PDF
+    else if (req.file.mimetype === 'application/pdf' ) {
+      const dataBuffer = fs.readFileSync(filePath);
+      const pdfData = await pdfParse(dataBuffer);
+      const fullText = pdfData.text;
+      const fullPrompt = userPrompt + fullText;
+      fs.unlinkSync(filePath);
+      logEvent('INFO', `Completed PDF analysis length=${fullPrompt.length}`, req);
+
+      return res.json({
+        success: true,
+        prompt: fullPrompt
+      });
+    }
+      else {
+      fs.unlinkSync(filePath);
+      logEvent('INFO', `Unsupported file type: ${req.file.mimetype}`, req);
+      return res.status(400).json({ success: false, error: "Unsupported file type" });
+    }
+  } catch (err) {
+    logEvent('ERROR', `Failed /api/upload-file: ${err.message}`, req);
+    res.status(500).json({ error: "Error processing file" });
+  }
+});
+
 
 router.post('/upload-file', upload.single('fileToAnalyze'), async (req, res) => {
   try {

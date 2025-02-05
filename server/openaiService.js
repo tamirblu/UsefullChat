@@ -15,7 +15,7 @@ const openai = new OpenAIApi(configuration);
  * @param {number} maxTokens
  * @returns {string} content from OpenAI
  */
-async function createChatCompletion(prompt, maxTokens = 5000) {
+async function createChatCompletion(prompt, maxTokens = 15000) {
   logEvent('INFO', ` prompt=(${prompt})`);
 
   const response = await openai.chat.completions.create({
